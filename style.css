@@ -96,11 +96,21 @@ h1 {
     justify-content: space-between;
     gap: 1.5rem;
 }
+
+.title-button {
+    width: fit-content;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
 .question-title {
     color: var(--dark-purple);
     font-family: "Work Sans Semi Bold", sans-serif;
     font-size: 1rem;
+    text-align: left;
     transition: color .3s ease-in-out;
+    cursor: pointer;
 }
 .question-title:hover {
     color: var(--purple);
@@ -119,7 +129,6 @@ h1 {
     border: none;
     cursor: pointer;
 }
-
 .question-button > .icon-plus:hover {
     filter: brightness(50%);
     transition: filter .3s ease-in-out, transform .3s ease-in-out;
@@ -135,7 +144,6 @@ h1 {
     height: 100%;
     background-size: cover;
 }
-
 .answer-text {
     color: var(--grayish-purple);
     font-family: "Work Sans", sans-serif;
@@ -159,17 +167,4 @@ h1 {
     100% {
         opacity: 1;
     }
-}
-
-@keyframes slideDown {
-    from {
-      transform: translateY(-5%);
-    }
-    to {
-      transform: translateY(0);
-    }
-}
-  
-.element-slide-down {
-    animation: slideDown 1s ease-in-out;
 }

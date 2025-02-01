@@ -22,17 +22,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   accordionItems.forEach((item, index) => {
     const questionTitle = item.querySelector('.question-title');
+    const titleButton = item.querySelector('.title-button');
     const questionButton = item.querySelector('.question-button');
     const questionIconPlus = item.querySelector('.icon-plus');
     const questionIconMinus = item.querySelector('.icon-minus');
     const answer = item.querySelector('.answer-text');
     
-    questionButton.addEventListener('click', () => {
+    function toggleAnswer() {
         questionIconPlus.classList.toggle('isOff');
         questionIconMinus.classList.toggle('isOff');
-        questionButton.blur();
         answer.classList.toggle('isOn');
-    });
+    }
+
+    titleButton.addEventListener('click', toggleAnswer);
+    questionButton.addEventListener('click', toggleAnswer);
     
     questionTitle.textContent = data[index].question;
     answer.textContent = data[index].answer;
