@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const accordionItems = document.querySelectorAll('.accordion-item');
   
   accordionItems.forEach((item, index) => {
-    const questionTitle = item.querySelector('.question-title');
+    // const questionTitle = item.querySelector('.question-title');
     const titleButton = item.querySelector('.title-button');
     const questionButton = item.querySelector('.question-button');
     const questionIconPlus = item.querySelector('.icon-plus');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     titleButton.addEventListener('click', toggleAnswer);
     questionButton.addEventListener('click', toggleAnswer);
     
-    questionTitle.textContent = data[index].question;
+    titleButton.textContent = data[index].question;
     answer.textContent = data[index].answer;
   });
 });

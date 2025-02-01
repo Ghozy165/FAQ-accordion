@@ -105,16 +105,13 @@ h1 {
     border-radius: 1rem;
     border: none;
     cursor: pointer;
-}
-.question-title {
     color: var(--dark-purple);
     font-family: "Work Sans Semi Bold", sans-serif;
     font-size: 1rem;
     text-align: left;
     transition: color .3s ease-in-out;
-    cursor: pointer;
 }
-.question-title:hover {
+.title-button:hover {
     color: var(--purple);
 }
 .question-button {
