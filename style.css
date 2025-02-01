@@ -37,11 +37,13 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url('./assets/images/background-pattern-mobile.svg');
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .container {
   width: fit-content;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +81,7 @@ h1 {
   font-family: "Work Sans Bold", sans-serif;
 }
 
-.accordion, .accordion-item, .answer {
+.accordion, .accordion-item {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -144,12 +146,20 @@ h1 {
     height: 100%;
     background-size: cover;
 }
+.answer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
 .answer-text {
     color: var(--grayish-purple);
     font-family: "Work Sans", sans-serif;
     font-size: .9rem;
     line-height: 1.5;
     display: none;
+    text-align: left;
 }
 
 .isOff{
@@ -166,5 +176,28 @@ h1 {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+    }
+    .container {   
+        padding: 1.5rem 3rem;
+        margin: 0;
+    }
+    .header-icon {
+        max-width: 2rem;
+        max-height: 2rem;
+    }   
+    h1 {
+        font-size: 3rem;
+    }
+    .question-title {
+        font-size: 1.25rem;
+    }
+    .answer-text {
+        font-size: 1rem;
     }
 }
